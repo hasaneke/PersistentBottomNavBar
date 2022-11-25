@@ -53,12 +53,10 @@ class BottomNavStyle3 extends StatelessWidget {
                           child: DefaultTextStyle.merge(
                             style: TextStyle(
                                 color: item.textStyle != null
-                                    ? item.textStyle!.apply(
-                                            color: isSelected
-                                                ? (item.activeColorSecondary ??
-                                                    item.activeColorPrimary)
-                                                : item.inactiveColorPrimary)
-                                        as Color?
+                                    ? (isSelected
+                                        ? (item.activeColorSecondary ??
+                                            item.activeColorPrimary)
+                                        : item.inactiveColorPrimary)
                                     : isSelected
                                         ? (item.activeColorSecondary ??
                                             item.activeColorPrimary)
